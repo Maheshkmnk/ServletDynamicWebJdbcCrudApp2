@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>ServletsDynamicWebCrudApp</display-name>
+
+  <welcome-file-list>
+    <welcome-file>insert.html</welcome-file>
+  </welcome-file-list>
+
+  <servlet>
+	  <servlet-name>InsertOperation</servlet-name>
+	  <servlet-class>in.mypackage.controller.InsertOperation</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+	  <servlet-name>InsertOperation</servlet-name>
+	  <url-pattern>/insert</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	  <servlet-name>DeleteOperation</servlet-name>
+	  <servlet-class>in.mypackage.controller.DeleteOperation</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+	  <servlet-name>DeleteOperation</servlet-name>
+	  <url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>UpdateOperation</servlet-name>
+	<servlet-class>in.mypackage.controller.UpdateOperation</servlet-class>  
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>UpdateOperation</servlet-name>
+  	<url-pattern>/edit</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>UpdateOperation</servlet-name>
+	<servlet-class>in.mypackage.controller.UpdateOperation</servlet-class>  
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>UpdateOperation</servlet-name>
+  	<url-pattern>/update</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ReadOperation</servlet-name>
+  	<servlet-class>in.mypackage.controller.ReadOperation</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ReadOperation</servlet-name>
+  	<url-pattern>/read</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+  	<display-name>InsertFilterValidation</display-name>
+  	<filter-name>InsertFilterValidation</filter-name>
+  	<filter-class>in.mypackage.filter.InsertFilterValidation</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>InsertFilterValidation</filter-name>
+  	<url-pattern>/insert</url-pattern>
+  </filter-mapping>  
+</web-app>
